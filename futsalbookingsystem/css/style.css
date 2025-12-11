@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+}
+
+.header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand h1 {
+    color: white;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.menu a:hover, .menu a.active {
+    background: #34495e;
+    border-radius: 3px;
+}
+
+/* Hero Section with Single Background Image */
+.hero {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+    background-image: url('https://images.unsplash.com/photo-1575361204480-aadea25e6e68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.7), rgba(52, 152, 219, 0.7));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding-top: 15vh;
+}
+
+.header {
+    position: relative;
+    z-index: 1000;
+    background: rgba(44, 62, 80, 0.9);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #2980b9;
+}
+
+.success {
+     color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+     background: #27ae60;
+       padding: 10px 20px;
+     }
+.success:hover { background: #219653; }
+.danger { display: inline-block;
+    padding: 10px 20px;
+    background: #b21414;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;}
+.danger:hover{background-color: rgb(164, 8, 8);}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+.group {
+    margin-bottom: 15px;
+}
+
+.group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.group input, .group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.card {
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.card.available {
+    background: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.card.booked {
+    background: #f8d7da;
+    border-color: #f5c6cb;
+    cursor: not-allowed;
+}
+
+.card.selected {
+    background: #3498db;
+    color: white;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background: #2c3e50;
+    color: white;
+    font-weight: 600;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.pending { background: #fff3cd; color: #856404; }
+.approved { background: #d1edff; color: #004085; }
+.rejected { background: #f8d7da; color: #721c24; }
+.slot-form {
+    display: inline-block;
+    width: 100%;
+}
+
+.small-button {
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .slots-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    
+    .hero {
+        height: 50vh;
+    }
+    
+    .hero-content {
+        padding-top: 12vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
